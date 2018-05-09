@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <textarea id="prods" rows="12" cols="30">
+    S' -> Statements
+    Statements -> Statement Statements | epsilon
+    Statement -> ( identifier Parameters )
+    Parameters -> Parameter Parameters | epsilon
+    Parameter -> Statement | identifier | number | string
+  </textarea>
+  <textarea id="code" rows="12" cols="30">
+    (add 1 1)
+  </textarea>
+  <textarea id="console" rows="12" cols="64"></textarea><br/>
+  <button id="go">GO</button>
+  <button id="go2">GO2</button>
+  <button id="go3">GO3</button>
+  <button id="go4">GO4</button>
+  <button id="go5">GO5</button>
+  <button id="clear">CLEAR</button>
+  <button id="reset">RESET</button>
+  <script src="scripts/main.js"></script>
+  <p>
+    GO:Generate internal data structures<br/>
+    GO2:Generate States of CLR(1) items<br/>
+    GO3:Generate CLR(1) Parsing Table<br/>
+    GO4:Generate AST from code<br/>
+    GO5:Type Check AST
+  </p>
+</body>
+<!--
+S' -> A
+A -> B C D
+B -> a b c | epsilon
+C -> d e f | epsilon
+D -> g C h i
+-->
+</html>
